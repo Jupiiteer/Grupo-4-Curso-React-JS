@@ -1,10 +1,10 @@
-import React from 'react';
-import TaskItem from './TaskItem';
+import React from "react";
+import TaskItem from "../TaskItem/TaskItem";
 
 const TaskList = ({ tareas, onCompleteTask, onDeleteTask }) => {
   return (
     <ul>
-      {tareas.map(tarea => (
+      {tareas.map((tarea) => (
         <TaskItem
           key={tarea.id}
           tarea={tarea}
