@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { TaskList, TaskForm, TaskItem } from "./components";
+import './app.css'
 
 const App = () => {
   const obtenerTareasDesdeLocalStorage = () => {
@@ -38,7 +39,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="todo-container">
       <h1>Administrador de tareas</h1>
       <TaskForm onAddTask={handleAddTask} />
       <TaskList

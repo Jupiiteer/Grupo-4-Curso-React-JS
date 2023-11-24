@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './taskItem.css'
 
 const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
   const [isCompleted, setCompleted] = useState(tarea.completada);

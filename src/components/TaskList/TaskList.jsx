@@ -1,5 +1,6 @@
 import React from "react";
 import TaskItem from "../TaskItem/TaskItem";
+import './taskList.css'
 
 const TaskList = ({ tareas, onCompleteTask, onDeleteTask }) => {
   return (
