@@ -1,31 +1,32 @@
-import React, { useState } from 'react';
-import './taskForm.css'
+import React, { useState } from "react";
+import "./taskForm.css";
 
 const TaskForm = ({ onAddTask }) => {
-  const [nuevaTarea, setNuevaTarea] = useState('');
+  const [nuevaTarea, setNuevaTarea] = useState("");
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     setNuevaTarea(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     onAddTask(nuevaTarea);
-    setNuevaTarea('');
+    setNuevaTarea("");
   };
 
   return (
-    <div className='input-container'>
-      <form onSubmit={handleSubmit}>
-        <input className='input-task'
-          type="text"
-          placeholder="Añade una nueva tarea"
-          value={nuevaTarea}
-          onChange={handleInputChange}
-        />
-        <button className='submit-button ' type="submit">Añadir tarea</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="input-container">
+      <input
+        className="input-task"
+        type="text"
+        placeholder="Añade una nueva tarea o buscar..."
+        value={nuevaTarea}
+        onChange={handleInputChange}
+      />
+      <button className="submit-button " type="submit">
+        Añadir tarea
+      </button>
+    </form>
   );
 };
 

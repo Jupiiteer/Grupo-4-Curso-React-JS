@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { TaskList, TaskForm, TaskItem } from "./components";
-import './app.css'
+import { TaskList, TaskForm } from "./components";
+import "./app.css";
 
 const App = () => {
   const obtenerTareasDesdeLocalStorage = () => {
