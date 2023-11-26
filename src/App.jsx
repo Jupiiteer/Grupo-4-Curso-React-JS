@@ -3,6 +3,7 @@ import { TaskList, TaskForm } from "./components";
 import "./app.css";
 
 const App = () => {
+  
   const obtenerTareasDesdeLocalStorage = () => {
     const tareasAlmacenadas = localStorage.getItem("tareas");
     return tareasAlmacenadas ? JSON.parse(tareasAlmacenadas) : [];
@@ -10,11 +11,13 @@ const App = () => {
 
   const [tareas, setTareas] = useState(obtenerTareasDesdeLocalStorage);
 
+
   useEffect(() => {
     localStorage.setItem("tareas", JSON.stringify(tareas));
     console.log("Tareas actualizadas", tareas);
   }, [tareas]);
 
+  
   const handleCompleteTask = (tareaId) => {
     setTareas((prevTasks) =>
       prevTasks.map((tarea) =>

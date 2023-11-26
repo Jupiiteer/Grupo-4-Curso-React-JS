@@ -4,7 +4,6 @@
   gap: 2rem;
 }
 
-
 .input-task {
   flex: 1;
   padding: 1rem;
@@ -14,11 +13,22 @@
 }
 
 .submit-button {
-  background-color: #4caf50;
+  background-color: #4169E1;
   color: #fff;
   border: none;
   padding: 1rem 1.5rem;
   border-radius: .4rem;
   cursor: pointer;
   font-size: 1.6rem;
+  
+}
+.submit-button:hover{
+  background-color: #0178a0;
+
+
+} 
+
+.error-message {
+  color: red;
+  margin-top: 5px;
 }
