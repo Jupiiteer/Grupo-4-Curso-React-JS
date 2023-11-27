@@ -55,5 +55,5 @@ li button.delete:hover {
 }
 
 .completado {
-  text-decoration-line: line-through;
+  text-decoration: line-through 3px green;
 }
