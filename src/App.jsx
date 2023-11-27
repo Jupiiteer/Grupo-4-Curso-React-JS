@@ -1,9 +1,8 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { TaskList, TaskForm } from "./components";
 import "./app.css";
 
 const App = () => {
-
   const obtenerTareasDesdeLocalStorage = () => {
     const tareasAlmacenadas = localStorage.getItem("tareas");
     return tareasAlmacenadas ? JSON.parse(tareasAlmacenadas) : [];
@@ -13,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     localStorage.setItem("tareas", JSON.stringify(tareas));
-    console.log("Tareas actualizadas", tareas)
+    console.log("Tareas actualizadas", tareas);
   }, [tareas]);
 
   const handleCompleteTask = (tareaId) => {
@@ -30,12 +29,7 @@ const App = () => {
     setTareas((prevTasks) => prevTasks.filter((tarea) => tarea.id !== tareaId));
   };
 
-  const handleAddTask = (tareaNombre) => {
-    const nuevaTarea = {
-      id: tareas.length + 1,
-      nombre: tareaNombre,
-      completada: false
-    };
+  const handleAddTask = (nuevaTarea) => {
     setTareas((prevTasks) => [...prevTasks, nuevaTarea]);
   };
 

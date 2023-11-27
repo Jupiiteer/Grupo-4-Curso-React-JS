@@ -1,25 +1,31 @@
 import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./taskForm.css";
 
 const TaskForm = ({ onAddTask }) => {
-  const [nuevaTarea, setNuevaTarea] = useState("");
+  const [newTarea, setNewTarea] = useState("");
   const [mensajeError, setMensajeError] = useState("");
 
-  const handleInputChange = (event) => {
-    setNuevaTarea(event.target.value);
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const title = e.target.title.value;
+    const desc = e.target.desc.value;
+    const newTarea = {
+      title,
+      desc,
+      id: uuidv4(),
+    };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (nuevaTarea.trim() === "") {
+    if (newTarea.title.trim() === "") {
       setMensajeError("Por favor, escribe una tarea.");
       setTimeout(() => {
         setMensajeError("");
       }, 5000);
       return;
     }
-    onAddTask(nuevaTarea);
-    setNuevaTarea("");
+
+    onAddTask(newTarea);
+    setNewTarea("");
   };
 
   return (
@@ -27,10 +33,18 @@ const TaskForm = ({ onAddTask }) => {
       <input
         className="input-task"
         type="text"
+        id="title"
+        name="title"
         placeholder="Añade una nueva tarea"
-        value={nuevaTarea}
-        onChange={handleInputChange}
+        value={newTarea.title}
       />
+      <textarea
+        name="desc"
+        id="desc"
+        className="input-desc"
+        value={newTarea.desc}
+        placeholder="Descripción de la tarea"
+      ></textarea>
       <button className="submit-button " type="submit">
         Añadir tarea
       </button>

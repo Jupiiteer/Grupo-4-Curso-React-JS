@@ -28,6 +28,10 @@ li button.no-complete {
   cursor: pointer;
 }
 
+li button.no-complete:hover {
+  background-color: #cfddd7;
+}
+
 li button.complete {
   background-color: #008000;
   color: #fff;
@@ -47,7 +51,7 @@ li button.delete {
 }
 
 li button.complete:hover {
-  background-color: #02c902;
+  background-color: #4da167;
 }
 
 li button.delete:hover {
