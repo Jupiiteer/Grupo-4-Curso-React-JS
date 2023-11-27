@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import "./taskItem.css";
 
 const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
@@ -12,16 +14,16 @@ const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
 
   return (
       <li>
-        <span className={`${isCompleted ? "completado" : ""}`}>{title}</span>
-        <textarea name="desc" id="desc">
+        <h2 className={`${isCompleted ? "completado" : ""}`}>{title}</h2>
+        <p name="desc" id="desc">
           {desc}
-        </textarea>
-      <button className={`${isCompleted ? "complete" : "no-complete"}`} onClick={handleComplete}>
-        {`${isCompleted ? "COMPLETADO" : "NO COMPLETADO"}`}
-      </button>
-      <button className="delete" onClick={() => onDeleteTask(id)}>
-        Eliminar
-      </button>
+        </p>
+        <button className={`${isCompleted ? "complete" : "no-complete"}`} onClick={handleComplete}>
+          {`${isCompleted ? "COMPLETADO" : "NO COMPLETADO"}`}
+        </button>
+        <button className="delete" onClick={() => onDeleteTask(id)}>
+          <FontAwesomeIcon icon={faTrash} />
+        </button>
     </li>
   );
 };

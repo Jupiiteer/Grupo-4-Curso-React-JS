@@ -4,7 +4,6 @@ li {
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 10px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease;
@@ -12,6 +11,17 @@ li {
 
 li:hover {
   background-color: #f0f0f0;
+}
+
+li h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+li p {
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 li button {

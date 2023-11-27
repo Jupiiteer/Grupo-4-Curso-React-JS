@@ -96,6 +96,10 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
+textarea {
+  font-family: Arial, sans-serif;
+}
+
 
 .error-message {
   color: red;
