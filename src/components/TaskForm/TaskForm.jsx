@@ -35,7 +35,7 @@ const TaskForm = ({ onAddTask }) => {
         type="text"
         id="title"
         name="title"
-        placeholder="Añade una nueva tarea"
+        placeholder="Busca o añade una tarea..."
         value={newTarea.title}
       />
       <textarea
