@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { FaRegTrashCan } from "react-icons/fa6";
 import "./taskItem.css";
 
 const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
-  const { completada, id, title, desc } = tarea;
+  const { completada, id, title, desc} = tarea;
   const [isCompleted, setCompleted] = useState(completada);
 
   const handleComplete = () => {
@@ -12,22 +11,17 @@ const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
   };
 
   return (
-    <li>
-      <div className="principal">
-        <span className={`${isCompleted ? "completado" : ""}`}> {title} </span>
-        <button
-          className={`${isCompleted ? "complete" : "no-complete"}`}
-          onClick={handleComplete}
-        >
-          {`${isCompleted ? "COMPLETADO" : "NO COMPLETADO"}`}
-        </button>
-        <button className="delete" onClick={() => onDeleteTask(id)}>
-          <FaRegTrashCan />
-        </button>
-      </div>
-      <p name="desc" id="desc" className="desc">
-        {desc}
-      </p>
+      <li>
+        <span className={`${isCompleted ? "completado" : ""}`}>{title}</span>
+        <textarea name="desc" id="desc">
+          {desc}
+        </textarea>
+      <button className={`${isCompleted ? "complete" : "no-complete"}`} onClick={handleComplete}>
+        {`${isCompleted ? "COMPLETADO" : "NO COMPLETADO"}`}
+      </button>
+      <button className="delete" onClick={() => onDeleteTask(id)}>
+        Eliminar
+      </button>
     </li>
   );
 };
