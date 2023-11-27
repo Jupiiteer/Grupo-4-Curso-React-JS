@@ -1,32 +1,30 @@
-.input-container{
+.input-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.input-task {
+.input-task,
+.input-desc {
   flex: 1;
   padding: 1rem;
-  border: .1rem solid #ddd;
-  border-radius: .4rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
   font-size: 1.6rem;
 }
 
 .submit-button {
-  background-color: #4169E1;
+  background-color: #4169e1;
   color: #fff;
   border: none;
   padding: 1rem 1.5rem;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   cursor: pointer;
   font-size: 1.6rem;
-  
 }
-.submit-button:hover{
+.submit-button:hover {
   background-color: #0178a0;
-
-
-} 
+}
 
 .error-message {
   color: red;

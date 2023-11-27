@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./taskItem.css";
 
 const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
-  const { completada, id, nombre } = tarea;
+  const { completada, id, nombre, descripcion } = tarea;
   const [isCompleted, setCompleted] = useState(completada);
 
   const handleComplete = () => {
@@ -12,9 +12,16 @@ const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
 
   return (
     <li>
-      <span className={` ${isCompleted ? 'completado' : ''}`} > {nombre} </span>
-      <button className="complete" onClick={handleComplete}>Completada</button>
-      <button className="delete" onClick={() => onDeleteTask(id)}>Eliminar</button>
+      <span className={`${isCompleted ? "completado" : ""}`}> {nombre} </span>
+      <span className={`${isCompleted ? "completado" : ""}`}>
+        {descripcion}
+      </span>
+      <button className="complete" onClick={handleComplete}>
+        {!isCompleted ? "No completado" : "Completado"}
+      </button>
+      <button className="delete" onClick={() => onDeleteTask(id)}>
+        Eliminar
+      </button>
     </li>
   );
 };

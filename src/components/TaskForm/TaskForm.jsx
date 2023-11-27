@@ -31,6 +31,12 @@ const TaskForm = ({ onAddTask }) => {
         value={nuevaTarea}
         onChange={handleInputChange}
       />
+      <textarea
+        name="input-desc"
+        id="input-desc"
+        placeholder="Descripción de la tarea"
+        className="input-desc"
+      ></textarea>
       <button className="submit-button " type="submit">
         Añadir tarea
       </button>
