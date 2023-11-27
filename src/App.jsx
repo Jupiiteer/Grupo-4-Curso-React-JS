@@ -9,6 +9,7 @@ const App = () => {
   };
 
   const [tareas, setTareas] = useState(obtenerTareasDesdeLocalStorage);
+  const [tareasFiltradas, setTareasFiltradas] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("tareas", JSON.stringify(tareas));
@@ -39,12 +40,21 @@ const App = () => {
     setTareas((prevTasks) => [...prevTasks, nuevaTarea]);
   };
 
+  const handleSearch = (searchTerm) => {
+    const tareasCoincidentes = tareas.filter(
+      (tarea) =>
+        tarea.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        tarea.descripcion.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setTareasFiltradas(tareasCoincidentes);
+  };
+
   return (
     <div className="todo-container">
       <h1>Administrador de tareas</h1>
-      <TaskForm onAddTask={handleAddTask} />
+      <TaskForm onAddTask={handleAddTask} onSearch={handleSearch} />
       <TaskList
-        tareas={tareas}
+        tareas={tareasFiltradas.length > 0 ? tareasFiltradas : tareas}
         onCompleteTask={handleCompleteTask}
         onDeleteTask={handleDeleteTask}
       />

@@ -11,6 +11,8 @@
   border: 0.1rem solid #ddd;
   border-radius: 0.4rem;
   font-size: 1.6rem;
+  font-family: "Arial", sans-serif;
+  line-height: 2rem;
 }
 
 .submit-button {

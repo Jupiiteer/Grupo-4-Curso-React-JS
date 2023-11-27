@@ -14,6 +14,20 @@ li:hover {
   background-color: #f0f0f0;
 }
 
+li button {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+li button.no-complete {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 li button.complete {
   background-color: #008000;
   color: #fff;

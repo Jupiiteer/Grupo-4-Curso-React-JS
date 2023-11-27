@@ -13,10 +13,11 @@ const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
   return (
     <li>
       <span className={`${isCompleted ? "completado" : ""}`}> {nombre} </span>
-      <span className={`${isCompleted ? "completado" : ""}`}>
-        {descripcion}
-      </span>
-      <button className="complete" onClick={handleComplete}>
+      <p className={`${isCompleted ? "completado" : ""}`}>{descripcion}</p>
+      <button
+        className={!isCompleted ? "no-complete" : "complete"}
+        onClick={handleComplete}
+      >
         {!isCompleted ? "No completado" : "Completado"}
       </button>
       <button className="delete" onClick={() => onDeleteTask(id)}>
