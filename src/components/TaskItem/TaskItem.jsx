@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faCheck  } from '@fortawesome/free-solid-svg-icons';
 import "./taskItem.css";
 
 const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
@@ -18,23 +18,26 @@ const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
   };
 
   return (
-      <li>
+    <li>
+      <div>
         <h2 className={`${isCompleted ? "completado" : ""}`}>{title}</h2>
-        <textarea
-        name="desc"
-        id="desc"
-        value={taskDescription}
-        onChange={handleDescriptionChange}
-      />
-      <button className={`${isCompleted ? "complete" : "no-complete"}`} onClick={handleComplete}>
-        {`${isCompleted ? "COMPLETADO" : "NO COMPLETADO"}`}
-      </button>
-      <button className="delete" onClick={() => onDeleteTask(id)}>
-        <FontAwesomeIcon icon={faTrash} />
-      </button>
+        <textarea 
+          name="desc"
+          id="desc"
+          value={isCompleted ? "" : taskDescription}
+          onChange={handleDescriptionChange}
+        />
+      </div>
+      <div>
+        <button className={`${isCompleted ? "complete" : "no-complete"}`} onClick={handleComplete}>
+          <FontAwesomeIcon icon={faCheck} />
+        </button>
+        <button className="delete" onClick={() => onDeleteTask(id)}>
+          <FontAwesomeIcon icon={faTrash} />
+        </button>
+      </div>    
     </li>
   );
 };
 
 export default TaskItem;
-

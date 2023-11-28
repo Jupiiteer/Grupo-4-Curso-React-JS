@@ -2,11 +2,20 @@ li {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 50%;
   transition: background-color 0.3s ease;
+  margin: 30px auto;
+}
+
+li div {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
 }
 
 li:hover {
@@ -14,26 +23,30 @@ li:hover {
 }
 
 li h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
   font-size: 16px;
-}
-
-li p {
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 li button {
   text-transform: uppercase;
   font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+li textarea {
+
+  margin-bottom: 10px;
+
 }
 
 li button.no-complete {
   background-color: #ccc;
   color: #333;
   border: none;
-  padding: 5px 10px;
+  width: 30px; 
+  height: 30px; 
+  padding: 0; 
   border-radius: 4px;
   cursor: pointer;
 }
@@ -46,7 +59,9 @@ li button.complete {
   background-color: #008000;
   color: #fff;
   border: none;
-  padding: 5px 10px;
+  width: 30px; 
+  height: 30px; 
+  padding: 5px; 
   border-radius: 4px;
   cursor: pointer;
 }
@@ -55,9 +70,11 @@ li button.delete {
   background-color: #c0392b;
   color: #fff;
   border: none;
-  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
+  width: 30px; 
+  height: 30px; 
+  padding: 0; 
 }
 
 li button.complete:hover {

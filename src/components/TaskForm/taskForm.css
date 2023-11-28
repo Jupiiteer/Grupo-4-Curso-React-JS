@@ -4,19 +4,21 @@ body {
   padding: 0;
 }
 
-button {
+.boton-agregar {
   background-color: rgb(76, 127, 175);
   color: white;
   border: none;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 10px;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  width: 40%;
   cursor: pointer;
+  border-radius: 50px;
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -46,7 +48,10 @@ button {
   float: right;
   font-size: 30px;
   font-weight: bold;
-  cursor: pointer; 
+  cursor: pointer;
+  display: flex;
+  align-self: flex-end; 
+
 }
 
 .close:hover,
@@ -56,11 +61,10 @@ button {
   cursor: pointer;
 }
 
-
 .input-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   margin: 30px 30px;
 }
 
@@ -71,6 +75,7 @@ button {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+
 }
 
 .submit-button {
@@ -86,11 +91,9 @@ button {
   border-radius: 4px;
 }
 
-
-input[type="text"] {
-  width: 100%;
+input {
+  width: 80%;
   padding: 10px;
-  margin-top: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
@@ -98,8 +101,8 @@ input[type="text"] {
 
 textarea {
   font-family: Arial, sans-serif;
+  padding: 15px;
 }
-
 
 .error-message {
   color: red;

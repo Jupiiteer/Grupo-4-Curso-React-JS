@@ -10,7 +10,7 @@ const App = () => {
 
   const [tareas, setTareas] = useState(obtenerTareasDesdeLocalStorage);
   const [busqueda, setBusqueda] = useState("");
-  const [tareasFiltradas, setTareasFiltradas] = useState(tareas);
+  const [tareasFiltradas, setTareasFiltradas] = useState(obtenerTareasDesdeLocalStorage);
 
   useEffect(() => {
     localStorage.setItem("tareas", JSON.stringify(tareas));
@@ -46,8 +46,6 @@ const App = () => {
     ]);
   };
   
-  
-
   const handleSearch = (term) => {
     setBusqueda(term);
   };

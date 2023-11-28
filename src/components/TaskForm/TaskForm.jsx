@@ -42,6 +42,7 @@ const TaskForm = ({ onAddTask, onSearch }) => {
 
   return (
     <>
+    <div>
       <input
         type="text"
         placeholder="Buscar tarea"
@@ -49,7 +50,7 @@ const TaskForm = ({ onAddTask, onSearch }) => {
         onChange={handleInputChange}
       />
 
-      <button onClick={openModal}>Agregar tarea</button>
+      <button className="boton-agregar" onClick={openModal}>Agregar tarea</button>
 
       {isModalOpen && (
         <div className="modal-overlay">
@@ -82,6 +83,7 @@ const TaskForm = ({ onAddTask, onSearch }) => {
           </div>
         </div>
       )}
+    </div>
     </>
   );
 };
