@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
   font-family: "Arial", sans-serif;
+=======
+  font-family: 'Arial', sans-serif;
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
   margin: 0;
   padding: 0;
 }
@@ -30,14 +34,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 .modal {
   background-color: #fefefe;
+<<<<<<< HEAD
   padding: 2rem;
   border-radius: 0.8rem;
   max-width: 40rem;
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+=======
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 .close {
@@ -47,7 +64,12 @@ body {
   font-weight: bold;
   cursor: pointer;
   display: flex;
+<<<<<<< HEAD
   align-self: flex-end;
+=======
+  align-self: flex-end; 
+
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 .close:hover,
@@ -60,8 +82,13 @@ body {
 .input-container {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   gap: 3rem;
   margin: 3rem 3rem;
+=======
+  gap: 30px;
+  margin: 30px 30px;
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 .input-task,
@@ -71,6 +98,10 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 .submit-button {
