@@ -15,6 +15,10 @@ li div {
   display: flex;
   flex-direction: column;
   align-self: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 li:hover {
@@ -31,10 +35,30 @@ li button {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+<<<<<<< HEAD
 }
 
 li textarea {
   margin-bottom: 10px;
+=======
+}
+
+li textarea {
+
+  margin-bottom: 10px;
+
+}
+
+li button.no-complete {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  width: 30px; 
+  height: 30px; 
+  padding: 0; 
+  border-radius: 4px;
+  cursor: pointer;
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 
 @media (min-width: 768px) {
@@ -88,6 +112,7 @@ li textarea {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 320px) {
   li {
     padding: 2rem;
@@ -122,3 +147,38 @@ li textarea {
     height: 10rem;
   }
 }
+=======
+li button.complete {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  width: 30px; 
+  height: 30px; 
+  padding: 5px; 
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button.delete {
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 30px; 
+  height: 30px; 
+  padding: 0; 
+}
+
+li button.complete:hover {
+  background-color: #4da167;
+}
+
+li button.delete:hover {
+  background-color: #e74c3c;
+}
+
+.completado {
+  text-decoration: line-through 3px green;
+}
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792

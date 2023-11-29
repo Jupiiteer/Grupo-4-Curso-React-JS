@@ -2,10 +2,17 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 body {
   font-size: 16px;
   font-family: "Arial", sans-serif;
   background-color: #f4f4f4;
+=======
+body{
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
 }
 *,
 *:before,
@@ -19,6 +26,7 @@ h1 {
 }
 
 @media (min-width: 768px) {
+<<<<<<< HEAD
   .todo-container {
     max-width: 75rem;
     margin: 7rem auto;
@@ -37,3 +45,16 @@ h1 {
     text-align: center;
   }
 }
+=======
+    .todo-container {
+            max-width: 75rem;
+            margin: 7rem auto;
+            background-color: #fff;
+            border-radius: .8rem;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center; 
+            padding: 30px 30px;
+    }
+}
+>>>>>>> 1b3ea80293c7f1c5a5bc9bae5926066b1480f792
