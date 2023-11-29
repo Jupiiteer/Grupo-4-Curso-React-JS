@@ -1,33 +1,44 @@
 import React, { useState } from "react";
-import { FaRegTrashCan } from "react-icons/fa6";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./taskItem.css";
 
 const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
   const { completada, id, title, desc } = tarea;
   const [isCompleted, setCompleted] = useState(completada);
+  const [taskDescription, setTaskDescription] = useState(desc);
 
   const handleComplete = () => {
     setCompleted(!isCompleted);
     onCompleteTask(id);
   };
 
+  const handleDescriptionChange = (e) => {
+    setTaskDescription(e.target.value);
+  };
+
   return (
     <li>
-      <div className="principal">
-        <span className={`${isCompleted ? "completado" : ""}`}> {title} </span>
+      <div>
+        <h2 className={`${isCompleted ? "completado" : ""}`}>{title}</h2>
+        <textarea
+          name="desc"
+          id="desc"
+          value={isCompleted ? "" : taskDescription}
+          onChange={handleDescriptionChange}
+        />
+      </div>
+      <div className="iconos">
         <button
           className={`${isCompleted ? "complete" : "no-complete"}`}
           onClick={handleComplete}
         >
-          {`${isCompleted ? "COMPLETADO" : "NO COMPLETADO"}`}
+          <FontAwesomeIcon icon={faCheck} />
         </button>
         <button className="delete" onClick={() => onDeleteTask(id)}>
-          <FaRegTrashCan />
+          <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>
-      <p name="desc" id="desc" className="desc">
-        {desc}
-      </p>
     </li>
   );
 };
