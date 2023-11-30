@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./taskItem.css";
 
-const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => {
+const TaskItem = ({ tarea, onCompleteTask, onDeleteTask }) => 
+{
   const { completada, id, title, desc } = tarea;
   const [isCompleted, setCompleted] = useState(completada);
   const [taskDescription, setTaskDescription] = useState(desc);
