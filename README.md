@@ -1,5 +1,12 @@
 # Grupo 4 Página Web (Listado de Tareas)
 
+Integrantes:
+
+Kevin Agustin Ruiz, 
+Maia Cabral, 
+Angel Cutri, 
+Margarita Pardeilhan
+
 Este github está realizado para el proyecto grupal web del curso de ReactJS, dado por la UTN en el contexto de Argentina Programa 4.0
 
 ## Available Scripts
